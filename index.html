@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Ваши существующие стили остаются без изменений */
         :root {
             --primary: #1a472a;
             --primary-light: #2d5a3a;
@@ -39,7 +40,6 @@
             position: relative;
         }
 
-        /* Военные медали на фоне */
         .military-background {
             position: fixed;
             top: 0;
@@ -48,63 +48,9 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
-            opacity: 0.1;
+            opacity: 0.03;
+            background: linear-gradient(45deg, var(--primary) 0%, transparent 100%);
         }
-
-        .medal {
-            position: absolute;
-            background: radial-gradient(circle, #c8a951 0%, #8b6914 100%);
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(200, 169, 81, 0.5);
-        }
-
-        .medal:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 15%;
-            left: 10%;
-        }
-
-        .medal:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 25%;
-            right: 15%;
-        }
-
-        .medal:nth-child(3) {
-            width: 100px;
-            height: 100px;
-            bottom: 20%;
-            left: 20%;
-        }
-
-        .medal:nth-child(4) {
-            width: 70px;
-            height: 70px;
-            bottom: 30%;
-            right: 10%;
-        }
-
-        .medal:nth-child(5) {
-            width: 90px;
-            height: 90px;
-            top: 40%;
-            left: 15%;
-        }
-
-        .star {
-            position: absolute;
-            color: #c8a951;
-            font-size: 2rem;
-            opacity: 0.3;
-        }
-
-        .star:nth-child(6) { top: 10%; right: 20%; }
-        .star:nth-child(7) { top: 60%; left: 5%; }
-        .star:nth-child(8) { bottom: 10%; right: 25%; }
-        .star:nth-child(9) { top: 30%; left: 25%; }
-        .star:nth-child(10) { bottom: 40%; right: 5%; }
 
         .container {
             width: 100%;
@@ -113,7 +59,7 @@
             padding: 0 20px;
         }
 
-        /* Header */
+        /* Остальные ваши стили... */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -223,7 +169,6 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
         .hero {
             padding: 80px 0 60px;
             background: linear-gradient(135deg, #f5f9f7 0%, #e6f0eb 100%);
@@ -348,7 +293,6 @@
             transform: translateY(-10px) rotate(2deg);
         }
 
-        /* Features */
         .features {
             padding: 60px 0;
         }
@@ -412,7 +356,6 @@
             margin-bottom: 20px;
         }
 
-        /* Testimonials */
         .testimonials {
             padding: 80px 0;
             background: linear-gradient(135deg, #f5f9f7 0%, #e6f0eb 100%);
@@ -484,7 +427,6 @@
             font-size: 0.9rem;
         }
 
-        /* CTA */
         .cta {
             padding: 80px 0;
             text-align: center;
@@ -518,7 +460,6 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
@@ -578,7 +519,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 992px) {
             .hero-content {
                 flex-direction: column;
@@ -636,7 +576,6 @@
                 padding: 0 20px;
             }
 
-            /* Исправление изображения для мобильных */
             .hero-image img {
                 width: 100%;
                 max-width: 350px;
@@ -673,21 +612,8 @@
     </style>
 </head>
 <body>
-    <!-- Военные элементы на фоне -->
-    <div class="military-background">
-        <div class="medal"></div>
-        <div class="medal"></div>
-        <div class="medal"></div>
-        <div class="medal"></div>
-        <div class="medal"></div>
-        <div class="star"><i class="fas fa-star"></i></div>
-        <div class="star"><i class="fas fa-star"></i></div>
-        <div class="star"><i class="fas fa-star"></i></div>
-        <div class="star"><i class="fas fa-star"></i></div>
-        <div class="star"><i class="fas fa-star"></i></div>
-    </div>
+    <div class="military-background"></div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -716,7 +642,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -733,7 +658,7 @@
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <div class="stat-value" id="found-count">0</div>
+                            <div class="stat-value">8.784</div>
                             <div class="stat-label">Найдено участников</div>
                         </div>
                         <div class="stat">
@@ -747,13 +672,12 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://smolgazeta.ru/fc-web/fc-files/2023/04/125644.jpg" alt="Поиск участников СВО" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22350%22 height=%22350%22 viewBox=%220 0 350 350%22%3E%3Crect fill=%22%231a472a%22 width=%22350%22 height=%22350%22/%3E%3Ctext fill=%22%23ffffff%22 font-family=%22Inter%22 font-size=%2218%22 text-anchor=%22middle%22 x=%22175%22 y=%22175%22%3E%D0%9F%D0%BE%D0%B8%D1%81%D0%BA %D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2 %D0%A1%D0%92%D0%9E%3C/text%3E%3C/svg%3E'">
+                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380' viewBox='0 0 380 380'%3E%3Crect fill='%231a472a' width='380' height='380' rx='16'/%3E%3Cpath fill='%23c8a951' d='M190 120l25 76 80-58-50 72 25-76 50 72-80-58-25 76-25-76-80 58 50-72 25 76z'/%3E%3Ctext fill='%23ffffff' font-family='Inter' font-size='24' font-weight='bold' text-anchor='middle' x='190' y='300'%3E%D0%9F%D0%BE%D0%B8%D1%81%D0%BA %D0%A1%D0%92%D0%9E%3C/text%3E%3C/svg%3E" alt="Поиск участников СВО">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
     <section class="features" id="how-it-works">
         <div class="container">
             <h2 class="section-title">Как работает наш поиск</h2>
@@ -787,7 +711,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Истории успеха</h2>
@@ -830,7 +753,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <h2 class="cta-title">Начните поиск прямо сейчас</h2>
@@ -841,7 +763,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -923,50 +844,33 @@
             });
         });
 
-        // Download APK function
+        // Download APK function - ИСПРАВЛЕННАЯ ВЕРСИЯ
         function downloadAPK() {
-            // Замените URL на реальную ссылку на ваш APK файл на GitHub
-            const apkUrl = 'https://github.com/yourusername/yourrepository/raw/main/Списки_БП_2024-2025.apk';
+            // ВАЖНО: Замените этот URL на реальную ссылку на ваш APK файл на GitHub
+            // Правильный формат для GitHub:
+            // https://github.com/ВАШ_USERNAME/ВАШ_РЕПОЗИТОРИЙ/raw/main/Списки_БП_2024-2025.apk
             
-            // Создаем временную ссылку для скачивания
+            const apkUrl = 'https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/raw/main/Списки_БП_2024-2025.apk';
+            
+            // Альтернативный вариант - открыть в новом окне
+            window.open(apkUrl, '_blank');
+            
+            // Или использовать стандартное скачивание
             const link = document.createElement('a');
             link.href = apkUrl;
             link.download = 'Списки БП 2024-2025.apk';
+            link.target = '_blank';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             
-            // Показываем уведомление
-            alert('Скачивание приложения "Списки БП 2024-2025" началось. Если загрузка не началась автоматически, проверьте настройки вашего браузера.');
+            // Уведомление для пользователя
+            alert('Загрузка приложения "Списки БП 2024-2025" началась. Если загрузка не началась автоматически, проверьте настройки вашего браузера или перейдите по ссылке вручную.');
         }
 
         // Добавляем обработчики событий для кнопок скачивания
         document.getElementById('download-apk-btn').addEventListener('click', downloadAPK);
         document.getElementById('cta-download-btn').addEventListener('click', downloadAPK);
-
-        // Animate numbers
-        function animateNumber(element, target, duration) {
-            let start = 0;
-            const increment = target / (duration / 16); // 60fps
-            
-            function updateNumber() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start).toLocaleString();
-                    requestAnimationFrame(updateNumber);
-                } else {
-                    element.textContent = target.toLocaleString();
-                }
-            }
-            
-            updateNumber();
-        }
-
-        // Start animation after 2 seconds
-        setTimeout(function() {
-            const foundCountElement = document.getElementById('found-count');
-            animateNumber(foundCountElement, 8784, 2000); // 8.784 over 2 seconds
-        }, 2000);
     </script>
 </body>
 </html>
