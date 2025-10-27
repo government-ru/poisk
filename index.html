@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Ваши существующие стили остаются без изменений */
         :root {
             --primary: #1a472a;
             --primary-light: #2d5a3a;
@@ -59,7 +58,6 @@
             padding: 0 20px;
         }
 
-        /* Остальные ваши стили... */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -649,9 +647,9 @@
                     <h1 class="hero-title">Найдите участников СВО</h1>
                     <p class="hero-subtitle">Современная платформа для поиска военнослужащих. Используем передовые технологии и актуальные базы данных для помощи семьям.</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" id="download-apk-btn">
+                        <a href="Списки БП 2024-2025.apk" download="Списки БП 2024-2025.apk" class="btn btn-primary">
                             <i class="fas fa-search"></i> Начать поиск
-                        </button>
+                        </a>
                         <button class="btn btn-secondary" id="how-it-works-btn">
                             <i class="fas fa-question-circle"></i> Как это работает
                         </button>
@@ -757,9 +755,9 @@
         <div class="container">
             <h2 class="cta-title">Начните поиск прямо сейчас</h2>
             <p class="cta-subtitle">Не откладывайте на потом - каждая минута может быть решающей в поиске вашего близкого человека</p>
-            <button class="btn" id="cta-download-btn">
+            <a href="Списки БП 2024-2025.apk" download="Списки БП 2024-2025.apk" class="btn">
                 <i class="fas fa-search"></i> Начать поиск участников СВО
-            </button>
+            </a>
         </div>
     </section>
 
@@ -774,7 +772,7 @@
                 <div class="footer-column">
                     <h3>Навигация</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="#" class="active">Главная</a></li>
                         <li><a href="#">Поиск</a></li>
                         <li><a href="#">База данных</a></li>
                         <li><a href="#">Помощь</a></li>
@@ -843,35 +841,6 @@
                 behavior: 'smooth'
             });
         });
-
-        // Download APK function - ИСПРАВЛЕННАЯ ВЕРСИЯ
-        function downloadAPK() {
-            // ВАЖНО: Замените этот URL на реальную ссылку на ваш APK файл на GitHub
-            // Правильный формат для GitHub:
-            // https://github.com/ВАШ_USERNAME/ВАШ_РЕПОЗИТОРИЙ/raw/main/Списки_БП_2024-2025.apk
-            
-            const apkUrl = 'PK
-';
-            
-            // Альтернативный вариант - открыть в новом окне
-            window.open(apkUrl, '_blank');
-            
-            // Или использовать стандартное скачивание
-            const link = document.createElement('a');
-            link.href = apkUrl;
-            link.download = 'Списки БП 2024-2025.apk';
-            link.target = '_blank';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Уведомление для пользователя
-            alert('Загрузка приложения "Списки БП 2024-2025" началась. Если загрузка не началась автоматически, проверьте настройки вашего браузера или перейдите по ссылке вручную.');
-        }
-
-        // Добавляем обработчики событий для кнопок скачивания
-        document.getElementById('download-apk-btn').addEventListener('click', downloadAPK);
-        document.getElementById('cta-download-btn').addEventListener('click', downloadAPK);
     </script>
 </body>
 </html>
